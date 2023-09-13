@@ -10,6 +10,7 @@ public class CommentResponseDto {
     private Long id;
     private String contents;
     private String username;
+    private Long likeCount;
     private LocalDateTime saveDate;
     private LocalDateTime modifiedAt;
 
@@ -17,6 +18,7 @@ public class CommentResponseDto {
         this.id = saveComment.getId();
         this.contents = saveComment.getContents();
         this.username = saveComment.getUsername();
+        this.likeCount = saveComment.getLikeCount();
         this.saveDate = saveComment.getSaveDate();
         this.modifiedAt = saveComment.getModifiedAt();
     }
