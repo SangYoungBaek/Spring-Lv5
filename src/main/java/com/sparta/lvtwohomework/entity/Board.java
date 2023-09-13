@@ -25,6 +25,8 @@ public class Board extends  Timestamped{
     private String title;
     @Column(nullable = false, length = 500)
     private String contents;
+    @Column(name = "likecount", nullable = false)
+    private Long likeCount = 0L;
 
     @JsonIgnore
     @OneToMany(mappedBy = "board", cascade = CascadeType.REMOVE)

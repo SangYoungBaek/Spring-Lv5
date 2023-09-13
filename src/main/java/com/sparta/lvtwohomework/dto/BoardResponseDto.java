@@ -11,14 +11,17 @@ public class BoardResponseDto {
     private String username;
     private String title;
     private String contents;
+    private Long likeCount;
     private LocalDateTime saveDate;
     private LocalDateTime modifiedAt;
+
 
     public BoardResponseDto(Board board) {
         this.id = board.getId();
         this.username = board.getUsername();
         this.title = board.getTitle();
         this.contents = board.getContents();
+        this.likeCount = board.getLikeCount();
         this.saveDate = board.getSaveDate();
         this.modifiedAt = board.getModifiedAt();
     }
