@@ -23,7 +23,6 @@ public class LikeService {
     private final CommentRepository commentRepository;
 
     public StatusResponseDto createLikeBoard(Long boardId, User user) {
-        System.out.println("여기 아이디임 " + user.getId());
         Board board = boardRepository.findById(boardId).orElseThrow(() ->
                 new IllegalArgumentException("해당 게시글은 존재하지 않습니다.")
         );
